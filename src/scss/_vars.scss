@@ -1,0 +1,20 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "TT Norms", sans-serif;
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+
+  // colors
+  --light: #ffffff;
+  --dark: #131313;
+  --main-bg: #a95094;
+  --primary: #96317d;
+  --primary-hover: rgba(#96317d, .8);
+  --active: #ffc464;
+  --active-hover: rgba(#ffc464, .8);
+
+}

@@ -1,0 +1,15 @@
+//* components basic
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "ui";
+
+
+@import "./components/header";
+//* components main
+@import "./components/hero";
+@import "./components/benefits";
+
+//* ===============
+@import "./components/footer";
