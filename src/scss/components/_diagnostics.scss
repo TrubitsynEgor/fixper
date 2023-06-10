@@ -1,18 +1,50 @@
 .diagnostics {
   padding-top: 105px;
   padding-bottom: 152px;
-
+  overflow: hidden;
   background: url('../img/diagnostics/bg.png');
-  background-position: right 230px bottom 0;
+  background-position: right 0;
   background-repeat: no-repeat;
   background-color: #efeded;
 
 
 
+  @media (max-width: 1020px) {
+    background: url('../img/diagnostics/bg_02.png');
+    background-position: right bottom 300px;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #efeded;
+
+    &.active {
+      background: url('../img/diagnostics/bg_04.png');
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-color: #efeded;
+    }
+
+  }
+
+  @media (max-width: 560px) {
+    background: url('../img/diagnostics/bg_03.png');
+    background-position: right bottom 200px;
+    background-repeat: no-repeat;
+    background-color: #efeded;
+
+    &.active {
+      background: #efeded
+    }
+  }
 
   &__container {
     position: relative;
     display: flex;
+
+    @media (max-width: 1020px) {
+      display: block;
+    }
+
   }
 
   &__title {
@@ -23,6 +55,19 @@
 
   &__panel {
     padding-left: 65px;
+
+    @media (max-width: 1040px) {
+      padding-left: 45px;
+    }
+
+
+    @media (max-width: 1020px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-left: 0px;
+    }
 
     &--hide {
       display: none;
@@ -51,6 +96,10 @@
     gap: 25px 15px;
     margin-bottom: 45px;
 
+    @media (max-width: 1020px) {
+      display: none;
+    }
+
 
   }
 
@@ -59,7 +108,6 @@
     align-items: center;
     gap: 10px;
     font-size: 16px;
-    line-height: 28px;
 
     & svg {
       width: 32px;
@@ -67,6 +115,8 @@
       fill: transparent;
       stroke: orange;
     }
+
+
   }
 
   &__img-group {
@@ -75,12 +125,69 @@
     right: 0;
     top: -50px;
 
+    &--mobile {
+      position: static;
+      display: none;
+
+
+    }
+
+    @media (max-width: 1140px) {
+      top: 40px;
+      right: -120px;
+    }
+
+    @media (max-width: 1020px) {
+      display: none;
+
+      &--mobile {
+        display: block;
+        padding-right: 70px;
+
+      }
+    }
+
+
+  }
+
+
+
+  &__washer {
+    @media (max-width: 1140px) {
+      width: 70%;
+    }
+
+    @media (max-width: 1020px) {
+      width: 400px;
+      height: 540px;
+    }
+
+    @media (max-width:560px) {
+      width: 300px;
+      height: 450px;
+    }
+
+    @media (max-width:390px) {
+      width: 250px;
+      height: 370px;
+    }
+
+    @media (max-width:390px) {
+      width: 210px;
+      height: 300px;
+    }
+
   }
 
   &__decor {
     position: absolute;
     bottom: 158px;
     left: -7px;
+
+    @media (max-width: 1140px) {
+      width: 15%;
+      bottom: 80px;
+    }
   }
 
 
@@ -114,6 +221,10 @@
         fill: currentColor;
         margin-right: 10px;
 
+        @media (max-width: 560px) {
+          width: 30px;
+        }
+
       }
 
       &:hover {
@@ -135,6 +246,11 @@
     display: flex;
     align-items: center;
     gap: 30px;
+
+    @media (max-width: 560px) {
+      gap: 15px;
+    }
+
   }
 
   &__result-circle {
@@ -144,6 +260,12 @@
     justify-content: center;
     width: 100px;
     height: 100px;
+
+    @media (max-width: 560px) {
+      width: 80px;
+      height: 80px;
+    }
+
 
     & svg {
       position: absolute;
@@ -156,7 +278,17 @@
       width: 100px;
       height: 100px;
 
+      @media (max-width: 560px) {
+        width: 80px;
+        height: 80px;
+      }
+
     }
+  }
+
+  & button {
+    font-size: 14px;
+    padding: 15px;
   }
 
   &__result-caption {}
@@ -170,12 +302,20 @@
     line-height: 28px;
     margin-bottom: 7px;
 
+    @media (max-width: 560px) {
+      font-size: 16px;
+    }
   }
 
   &__price {
     font-weight: 700;
     font-size: 24px;
     line-height: 20px;
+
+    @media (max-width: 560px) {
+      display: block;
+      font-size: 18px;
+    }
   }
 
   &__link {
@@ -191,11 +331,47 @@
   }
 }
 
+.choices {
+  display: none;
+  width: 720px;
+  border: 1px solid var(--primary);
+  border-radius: 5px;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: -0.02em;
+  text-align: center;
+
+  &__inner,
+  &__list {
+    background: #efeded;
+  }
+
+  @media (max-width: 1020px) {
+    display: block;
+  }
+
+  @media (max-width: 730px) {
+    width: 360px;
+  }
+
+  @media (max-width:370px) {
+    width: 300px;
+  }
+
+}
+
 .percent {
   font-weight: 700;
   font-size: 26px;
   line-height: 40px;
   color: #2F2F2F;
+
+  @media (max-width: 560px) {
+    font-size: 20px;
+  }
+
 }
 
 .progress {

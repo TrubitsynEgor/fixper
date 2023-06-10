@@ -39,16 +39,15 @@ import { burger } from "./functions/burger";
 
 //custom select choices.js:
 
-// import Choices from 'choices.js';
-// const element = document.querySelectorAll('.custom-select');
-// if (element) {
-//   element.forEach(el => {
-//     const choices = new Choices(el, {
-//       searchEnabled: false,
-
-//     });
-//   })
-// }
+import Choices from "choices.js";
+const element = document.querySelectorAll(".custom-select");
+if (element) {
+  element.forEach((el) => {
+    const choices = new Choices(el, {
+      searchEnabled: false,
+    });
+  });
+}
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
 // import { getHeaderHeight } from './functions/header-height';
 

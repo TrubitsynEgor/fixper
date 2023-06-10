@@ -43,18 +43,31 @@ circle.forEach((el, idx) => {
 //====================================================>
 
 const diagnosticsBtn = document.querySelectorAll(".diagnostics__btn");
+const diagnosticSelect = document.querySelector(".custom-select");
 const diagnosticPanel = document.querySelector(".diagnostics__panel");
 const diagnosticResult = document.querySelector(".diagnostics__result");
 const backLink = document.querySelector(".diagnostics__result-backlink");
+const diagnosticSection = document.querySelector(".diagnostics");
 
-const getDiagnosticsResult = () => {
-  diagnosticPanel.classList.add("diagnostics__panel--hide");
-  diagnosticResult.classList.add("diagnostics__result--active");
-};
-diagnosticsBtn.forEach((el) =>
-  el.addEventListener("click", getDiagnosticsResult)
-);
+if (diagnosticsBtn) {
+  diagnosticsBtn.forEach((el) =>
+    el.addEventListener("click", () => {
+      diagnosticPanel.classList.add("diagnostics__panel--hide");
+      diagnosticResult.classList.add("diagnostics__result--active");
+    })
+  );
+}
+
+if (diagnosticSelect) {
+  diagnosticSelect.addEventListener("change", () => {
+    diagnosticPanel.classList.add("diagnostics__panel--hide");
+    diagnosticResult.classList.add("diagnostics__result--active");
+    diagnosticSection.classList.add("active");
+  });
+}
+
 backLink.addEventListener("click", () => {
   diagnosticResult.classList.remove("diagnostics__result--active");
   diagnosticPanel.classList.remove("diagnostics__panel--hide");
+  diagnosticSection.classList.remove("active");
 });
