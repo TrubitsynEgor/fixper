@@ -6,6 +6,13 @@
   padding: 30px 0;
   z-index: 200;
 
+  &.fixed {
+    position: fixed;
+    padding: 4px 0;
+    background-color: var(--main-bg);
+    z-index: 2000;
+  }
+
   @include small-tablet {
     padding: 10px 0;
   }
@@ -62,6 +69,8 @@
         flex-direction: column;
         align-items: center;
         gap: 32px;
+
+
       }
     }
 
@@ -77,9 +86,6 @@
       height: 20px;
       fill: var(--active);
 
-      @media (max-width: 560px) {
-        fill: var(--primary);
-      }
     }
   }
 
@@ -129,7 +135,7 @@
       right: 0;
       width: 320px;
       height: 100vh;
-      background-color: var(--active);
+      background-color: var(--main-bg);
     }
   }
 
@@ -171,7 +177,7 @@
   @media (max-width: 1074px) {
     display: block;
 
-    position: fixed;
+    position: absolute;
     right: 20px;
     color: var(--active);
 
