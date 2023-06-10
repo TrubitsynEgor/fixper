@@ -10,6 +10,7 @@
 
 
   @media (max-width: 1020px) {
+    overflow: visible;
     background: url('../img/diagnostics/bg_02.png');
     background-position: right bottom 300px;
     background-repeat: no-repeat;
@@ -142,10 +143,13 @@
 
       &--mobile {
         display: block;
-        padding-right: 70px;
+        transform: translateX(0);
 
       }
     }
+
+    @media (max-width: 560px) {}
+
 
 
   }
