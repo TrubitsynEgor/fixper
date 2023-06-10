@@ -1,0 +1,90 @@
+.costs {
+  padding-top: 65px;
+  padding-bottom: 97px;
+
+  &__title {
+    margin-bottom: 23px;
+
+  }
+
+  &__table {
+    width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+
+    & tr {
+      border-bottom: 1px solid #ECECEC;
+
+      &.hide {
+        display: none;
+      }
+    }
+
+    & th {
+      padding: 25px 10px;
+      text-align: right;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+
+    & td {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 25px 10px;
+
+      &.for-free {
+        font-size: 18px;
+        line-height: 24px;
+        color: var(--primary);
+        text-align: right;
+      }
+
+      &.price {
+        text-align: right;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+
+      }
+    }
+
+
+  }
+
+  &__btn {
+    padding-top: 44px;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto;
+    transition: all .3s ease-in-out;
+
+    &--hide {
+      display: none;
+    }
+
+    & svg {
+      width: 25px;
+      height: 25px;
+      fill: currentColor;
+      stroke: currentColor;
+    }
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}
+
+.big {
+  width: 650px;
+
+}
