@@ -1,4 +1,5 @@
 // @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
-@include font-face("TT Norms", "../resources/fonts/TTNormsRegular", 400, normal);
-@include font-face("TT Norms", "../resources/fonts/TTNormsMedium", 500, medium);
-@include font-face("TT Norms", "../resources/fonts/TTNormsBold", 700, bold);
+@include font-face("TTNorms", "../fonts/TTNorms-Regular", 400, normal);
+@include font-face("TTNorms", "../fonts/TTNorms-Medium", 500, medium);
+@include font-face("TTNorms", "../fonts/TTNorms-Bold", 700, bold);
+@include font-face("TTNorms", "../fonts/TTNorms-ExtraBold", 800, bold);

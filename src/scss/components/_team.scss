@@ -1,4 +1,160 @@
 .team {
-  min-height: 100vh;
+  padding-top: 99px;
+  padding-bottom: 114px;
   background: linear-gradient(0deg, #FAFAFA, #FAFAFA), #FAE6F5;
+
+  @media (max-width: 560px) {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  &__caption {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--primary);
+  }
+
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 48px;
+
+  }
+
+  &__slider {
+    &-nav {
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: 560px) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+      }
+
+    }
+
+    &-btns {
+      display: flex;
+      align-self: center;
+      gap: 40px;
+
+    }
+
+    &-prev,
+    &-next {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      cursor: pointer;
+      color: var(--primary);
+
+      font-size: 16px;
+      line-height: 19px;
+
+      & svg {
+        width: 40px;
+        height: 10px;
+        fill: currentColor;
+      }
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    background: var(--light);
+    border-radius: 0px 0px 15px 15px;
+    padding-bottom: 50px;
+
+    @media (max-width: 700px) {
+      align-items: center;
+    }
+
+  }
+
+  &__slide-content {
+    padding-left: 45px;
+
+    @media (max-width: 700px) {
+      padding-left: 0px;
+    }
+  }
+
+  &__slide-img {
+    max-width: 370px;
+    margin-bottom: 27px;
+
+  }
+
+  &__slide-subtitle {
+    margin-bottom: 4px;
+
+  }
+
+  &__slide-caption {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+  }
+
+  &__slide-stats {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__slide-stat {
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--primary);
+    position: relative;
+    padding-left: 25px;
+
+    &::before {
+      content: url('../img/team/mark.svg');
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10px;
+      height: 10px;
+
+    }
+  }
+}
+
+
+.swiper-pagination-bullets {}
+
+.swiper-pagination-bullet {
+  background: var(--primary);
+
+  &-active {
+    position: relative;
+
+    &::after {
+      content: url('../img/team/bullet.svg');
+      position: absolute;
+      left: -4px;
+      top: -6px;
+
+
+    }
+  }
+}
+
+.swiper-button-disabled {
+  color: var(--dark);
+  opacity: .8;
+  cursor: not-allowed;
+
+  & svg {
+    display: none;
+  }
 }
