@@ -25,17 +25,39 @@ const teamSlider = new Swiper(".team__slider", {
   },
 
   breakpoints: {
-    // when window width is >= 320px
     320: {
       slidesPerView: 1,
     },
-    // when window width is >= 480px
     700: {
       slidesPerView: 2,
     },
-    // when window width is >= 640px
     900: {
       slidesPerView: 3,
+    },
+  },
+});
+const commentsSlider = new Swiper(".comments__slider", {
+  speed: 400,
+  spaceBetween: 30,
+  slidesPerView: 2,
+
+  navigation: {
+    nextEl: ".comments__slider-next",
+    prevEl: ".comments__slider-prev",
+  },
+
+  pagination: {
+    el: ".comments__slider-pagination",
+    type: "bullets",
+    clickable: true,
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    900: {
+      slidesPerView: 2,
     },
   },
 });

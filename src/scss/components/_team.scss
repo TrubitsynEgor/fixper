@@ -1,6 +1,6 @@
 .team {
   padding-top: 99px;
-  padding-bottom: 114px;
+  padding-bottom: 106px;
   background: linear-gradient(0deg, #FAFAFA, #FAFAFA), #FAE6F5;
 
   @media (max-width: 560px) {
@@ -150,7 +150,7 @@
 }
 
 .swiper-button-disabled {
-  color: var(--dark);
+  color: var(--dark) !important;
   opacity: .8;
   cursor: not-allowed;
 
