@@ -91,6 +91,15 @@
     }
   }
 
+  &--fill {
+    background: var(--primary);
+    color: var(--light);
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
 }
 
 .text-field {
