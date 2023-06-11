@@ -1,0 +1,47 @@
+.alert {
+  position: fixed;
+  right: 1%;
+  bottom: 3%;
+  width: 300px;
+  height: 150px;
+  background-color: var(--main-bg);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  transition: all .3s ease-in-out;
+
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-weight: 700;
+    color: var(--active);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    color: var(--active);
+
+
+  }
+}

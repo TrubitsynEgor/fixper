@@ -71,3 +71,17 @@ backLink.addEventListener("click", () => {
   diagnosticPanel.classList.remove("diagnostics__panel--hide");
   diagnosticSection.classList.remove("active");
 });
+
+//? ==========================>
+const submitFeedbackBtn = document.querySelector(".feedback__form-btn");
+const alertWindow = document.querySelector(".alert");
+const closeAlertWindow = document.querySelector(".alert__close");
+
+submitFeedbackBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  alertWindow.classList.add("active");
+  setTimeout(() => alertWindow.classList.remove("active"), 5000);
+});
+closeAlertWindow.addEventListener("click", () => {
+  alertWindow.classList.remove("active");
+});
